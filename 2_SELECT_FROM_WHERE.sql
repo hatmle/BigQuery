@@ -23,3 +23,28 @@ query = """
         FROM `bigquery-public-data.pet_records.pets`
         WHERE Animal = 'Cat'
         """
+
+/* The triple quotation marks ("""):
+Tell Python that everything inside them is a single string, even though we have line breaks in it. 
+The line breaks aren't necessary, but they make it easier to read your query.
+
+Capitalize SELECT and FROM?
+No, SQL doesn't care about capitalization. However, it's customary to capitalize your SQL commands, 
+and it makes your queries a bit easier to read.
+
+/* More queries
+If you want multiple columns, you can select them with a comma between the names:*/
+query = """
+        SELECT city, country
+        FROM `bigquery-public-data.openaq.global_air_quality`
+        WHERE country = 'US'
+        """
+
+-- select all columns with a *
+query = """
+        SELECT *
+        FROM `bigquery-public-data.openaq.global_air_quality`
+        WHERE country = 'US'
+        """
+        
+
